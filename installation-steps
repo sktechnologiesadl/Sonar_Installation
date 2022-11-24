@@ -1,0 +1,22 @@
+########################################################################
+How to install the ansible ?
+
+1. Login to the server 
+2. switch to root user 
+	sudo su -
+3. Execute the followin command
+	amazon-linux-extras install ansible2 -y
+4. Verify with below command
+	 ansible --version
+
+
+########################################################################
+Now you can execute the following command to install the Sonar 
+
+Precheck command:
+	ansible-playbook sonar.yml --check
+#Note: If you found any error try to resolve it and got for execution 
+Execution:
+	ansible-playbook sonar.yml
+Verify:
+	ps -ef |grep -i sonar 
